@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+}
+:root,html
+body {
+    height: 100%;
+}
+
+#add-list {
+    width: 2em;
+    
+}
+#textbox{
+ 
+ text-align: center;
+ 
+}
+main{
+    
+    height: 60%;
+}
+html {
+    box-sizing: border-box;
+    font-size: calc(1rem + (5) * ((100vw - 300px) / (1080 - 300)));
+}
+input[type=checkbox] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+input[type=checkbox] + label {
+    position: relative;
+}
+
+input[type=checkbox] + label::before {
+    
+
+    content: '';
+    position: absolute;
+    top: 0.1em;
+    left: -1.5em;
+    width: 1em;
+    height: .75em;
+    border: thin solid grey;
+    margin-right: 1em;
+    padding: 0 .1em 1.1em .1em;
+}
+
+input[type=checkbox]:focus + label::before {
+    outline: rgb(59, 153, 252) solid 0.1em;
+}
+
+input[type=checkbox]:checked + label::before {
+    content: '🗸';
+}
+
+input[type="text"]{
+    border: 1px solid brown;
+
+}
+
+#formList{
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 3rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: space-between;
+    justify-content: space-evenly;
+}
+#formAdd
+{
+     display: flex;
+    height: 3em;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+
+
+#unordered-list{
+    
+    display: grid;
+    grid-template-columns: max-content;
+    grid-auto-rows: max-content;
+    height: 100%;
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+#unordered-list > li{
+    height: 3em;
+
+}
+header, footer {
+    display: flex;
+    height: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Footer */
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:30%;
+}

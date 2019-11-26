@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Saikiran">
+    <title>MyTo-DoList</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+           window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+    
+       
+</head>
+<body>
+        <template id="template_list">
+                <li>
+                    <input id="checkboxid" type="checkbox" name="checkboxid" onclick="checkBoxUpdate(this)">
+                    <label for ="checkboxid"></label>
+                </li>
+            </template>
+    <header>
+
+    </header>
+    <img src="img/cartoon.jpg" alt="" height="200" >
+    <main>
+        <form action="/" method="get" id="formAdd">
+            <label for="textbox">Add a To-Do</label>
+            <input id="textbox" type="text" name="textbox">
+            <input id="add-list" type="image" src="img/add to do.png" alt="Add a To Do">
+        </form>
+        <form action="/" method="get" id="formList">
+            <ul id="unordered-list">
+                
+            </ul>
+        </form>
+    </main>
+    <footer>
+copyright &copy; Sai Kiran
+    </footer>
+    
+    <script src="js/mytodo.js"></script>
+</body>
+</html>
