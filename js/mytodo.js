@@ -62,4 +62,26 @@ function addFunc(event) {
     todo.value = '';
 }
 
+
+function todo_Delete(elem){
+
+    elem.parentElement.classList.toggle('unorderedlistDelete');
+    elem.parentElement.addEventListener('animationend',functevent);
+}
+function functevent(event){
+    //alert("animation is stopped");
+    const key= this.querySelector("input[type=checkbox]").id;
+    //alert("key"+key);
+    const dataObj = window.localStorage;
+    dataObj.removeItem(key);
+    //alert(this.parentNode.id)
+    const parent = this.parentElement;
+    parent.removeChild(this);
+
+    //this.remove();
+    //const elem = document.querySelector(".list")
+    
+}
+
+
 addMyTodo();
